@@ -6,60 +6,102 @@
     android:layout_height="match_parent"
     tools:context=".bmiCalculator">
 
-    <ImageView
-        android:id="@+id/imgWeight"
-        android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:layout_marginStart="40dp"
-        app:layout_constraintBottom_toBottomOf="@+id/etWeight"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etWeight"
-        app:srcCompat="@drawable/ic_baseline_fitness_center_24" />
-
-    <ImageView
-        android:id="@+id/imgHeight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        app:layout_constraintBottom_toBottomOf="@+id/etHeight"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etHeight"
-        app:layout_constraintVertical_bias="0.666"
-        app:srcCompat="@drawable/ic_baseline_height_24" />
-
     <EditText
-        android:id="@+id/etWeight"
-        android:layout_width="0dp"
+        android:id="@+id/editTextNumber3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="Input weight in Kgs"
+        android:hint="Enter first number"
         android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/imgWeight"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etHeight"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:ems="10"
-        android:hint="Input height in cm"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/etWeight"
-        app:layout_constraintTop_toBottomOf="@+id/etWeight" />
-
-    <Button
-        android:id="@+id/btnCalculator"
+        android:id="@+id/editTextNumber4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="Calculate"
+        android:ems="10"
+        android:hint="Enter second number"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etHeight" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2
+"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4"/>
+
+    <Button
+        android:id="@+id/btnPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="+"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/btnMinus" />
+
+    <Button
+        android:id="@+id/btnMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        tools:layout_editor_absoluteY="323dp" />
+
+    <Button
+        android:id="@+id/btnDivide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="/"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        tools:layout_editor_absoluteY="426dp" />
+
+    <Button
+        android:id="@+id/btnModulus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:background="#FF5722"
+        android:backgroundTint="#9844A6"
+        android:text="%"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        tools:layout_editor_absoluteY="433dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:backgroundTint="#CE57E3"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnModulus" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
